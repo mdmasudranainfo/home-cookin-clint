@@ -7,6 +7,7 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged,
   updateProfile,
+  signOut,
 } from "firebase/auth";
 import app from "../../Firebase/Firebase.config";
 
@@ -33,6 +34,16 @@ const UserContext = ({ children }) => {
       photoURL: photoURL,
     });
   };
+  //   logOut
+  const logOut = () => {
+    return signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  };
   //   google SingIn
   const googleSing = () => {
     return signInWithPopup(auth, provider);
@@ -46,7 +57,7 @@ const UserContext = ({ children }) => {
     return unSubscribe();
   }, []);
   //
-  const userInfo = { Login, update, user, Register, googleSing };
+  const userInfo = { Login, logOut, update, user, Register, googleSing };
   return (
     <authContext.Provider value={userInfo}>
       {children}

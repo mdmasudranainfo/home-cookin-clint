@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { authContext } from "../Context/UserContext";
 
 const Header = () => {
-  const data = useContext(authContext);
-  console.log(data);
+  const { user, logOut } = useContext(authContext);
+  // console.log(data);
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
@@ -63,14 +63,27 @@ const Header = () => {
           </li>
 
           <li>
-            <a>Item 3</a>
+            <Link onClick={logOut}>Log Out</Link>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <Link to="/login" className="btn">
-          Login
-        </Link>
+        {user ? (
+          <>
+            <div className="avatar">
+              <div className="cursor-pointer w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                <img alt="" src={user.photoURL} />
+              </div>
+            </div>
+            {/*  */}
+          </>
+        ) : (
+          <>
+            <Link to="/login" className="btn">
+              Login
+            </Link>
+          </>
+        )}
       </div>
     </div>
   );
