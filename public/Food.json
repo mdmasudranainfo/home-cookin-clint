@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Pizza",
+    "price": "50",
+    "rating": "4.5",
+
+    "photo": "https://cdn.britannica.com/51/128651-050-60CA6B6A/pizza-margherita.jpg",
+    "description": "As far as pizza is concerned, we are typically traditionalists. Homemade crust, pureed tomatoes, fresh mozzarella, and a good quality olive oil. A great pizza does not need a lot of fancy toppings when the base ingredients are so good! However, there is one exception to this rule, and that is BBQ chicken pizza. We really did not expect to love this pizza all those years ago. Really, who puts BBQ sauce on pizza?! Well, we do — now. We’re fairly certain that removing any one of its ingredients would change the whole thing, because this pizza is all about that fantastic combination of flavors and textures. The bite of the red onion with the sweet and tangy BBQ sauce, chicken, and a blend of cheeses just can’t be beat!"
+  },
+  {
+    "title": "Burger",
+    "price": "60",
+    "rating": "4.6",
+    "photo": "https://cdn.britannica.com/31/122031-050-F8FCA663/Hamburger-cheeseburger.jpg",
+    "description": "Whether you are trying to avoid red meat, or you simply want a lighter option at your backyard barbecue, turkey burgers are a great option. We always keep ground turkey in our freezer all summer long just to get out of the same old hamburger rut that seems to happen every year. It is an extremely lean and healthy meat, but also can be full of flavor when cooked properly. Have no fear, The Stay At Home Chef is here to help you prepare the best, juiciest turkey burger ever!"
+  },
+  {
+    "title": "Pasta",
+    "price": "30",
+    "rating": "4.7",
+    "photo": "https://cdn.britannica.com/88/125888-050-CAC13FC1/Pasta-pesto-tomatoes.jpg",
+    "description": "Need a super easy pasta recipe to keep up your sleeve? This one is perfect! It’s super simple and easy to make, and is full of wonderful garlic and olive oil flavor. It’s so good, that we have been known to eat this on its own, but you can serve it up as a side dish or add some meat and veggies for a complete meal. It’s a versatile recipe that’s worth holding onto! Your family is going to love it!"
+  },
+  {
+    "title": "Spaghetti Pasta",
+    "price": "45",
+    "rating": "4.4",
+    "photo": "https://cdn.britannica.com/60/236460-050-AFA6D24F/Cooked-Italian-spaghetti-being-put-in-the-pan-with-hot-Bolognese-sauce.jpg",
+    "description": "We can’t get enough of this cheesy twist on a classic recipe. Is anyone else over spaghetti with tomato sauce and meatballs? Sure, it’s a classic and we love the classics, but after the 2,393,984th time, we’re ready for something different. And boy is this different in all of the right ways!"
+  },
+  {
+    "title": "STIR FRY",
+    "price": "65",
+    "rating": "4.9",
+    "photo": "https://cdn.britannica.com/32/206332-050-CD31BA79/Chinese-spring-rolls-street-food.jpg",
+    "description": "It’s no secret that we love to cook here at The Stay at Home Chef. We’re constantly inspired by the meals we eat at restaurants, and takeout food holds a special place in our hearts. When we discover something we love, it’s always fun to recreate it in our kitchen. Not only do we love to experiment, but it’s also reassuring to know exactly what ingredients are used. No more mystery meat or too much salt. This beef stir fry recipe is one of our favorite takeout meals to recreate. We like to start with the sauce. It is the perfect balance of sweet and savory and it marries perfectly with the tender beef and veggies. Serve this stir fry over rice and you can’t go wrong! Next time you’re tempted to order in, why not make this instead? It takes about the same time as it would for a delivery order to make it to your doorstep. And our homemade version is so much better!  "
+  },
+  {
+    "title": "VEGETABLE SOUP",
+    "price": "68",
+    "photo": "https://cdn.britannica.com/42/124642-004-95CBF00E/clam-chowder-New-England.jpg?s=1500x700&q=85",
+    "description": "Soup’s on! We loved hearing that as a kid. Growing up, soups and stews were some of our favorite meals. One of the best parts was soaking in all of those yummy aromas as the soup simmered on the stove for hours at a time. And while we will always cherish those fond memories, we don’t have the time to hang out over our stovetop all day long. The good news is that it is totally possible to create a delicious soup without having to let it cook for hours on end! Vegetable soup is one of our go-to’s when we’re craving something simple yet comforting. The variety of vegetables can be adjusted to your personal taste preferences. The options of add-ins are endless — and you only need to allow it to cook for around 35 minutes. Easy, comforting, and filling, this is one of the best vegetable soup recipes out there."
+  }
+]
