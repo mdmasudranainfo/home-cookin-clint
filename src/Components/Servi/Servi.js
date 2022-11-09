@@ -57,7 +57,7 @@ const Servi = () => {
   const [review, setReview] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/review")
+    fetch(`http://localhost:5000/review?serviceID=${_id}`)
       .then((res) => res.json())
       .then((data) => setReview(data));
   }, []);
@@ -127,9 +127,9 @@ const Servi = () => {
 
         <div className="view">
           <div className="">
-            {review.map((rv) => (
-              <div key={rv._id}>
-                <h1>{rv.name}</h1>
+            {review?.map((rv) => (
+              <div key={rv?._id}>
+                <h1>{rv?.name}</h1>
               </div>
             ))}
           </div>
