@@ -10,7 +10,7 @@ const Bannar = () => {
     <div className="carousel w-full">
       <div id="slide1" className="carousel-item relative w-full">
         <img src={banar1} className="w-full" />
-        <div className="absolute flex custom-text justify-between  ">
+        <div className="absolute hidden md:flex custom-text justify-between   ">
           <div className="">
             <h1 className="text-6xl text-white font-bold ">Thanksgiving</h1>
             <p className="text-4xl text-white">
@@ -29,7 +29,7 @@ const Bannar = () => {
       </div>
       <div id="slide2" className="carousel-item relative w-full">
         <img src={banar2} className="w-full" />
-        <div className="absolute flex custom-text justify-between  ">
+        <div className="absolute hidden md:flex custom-text justify-between  ">
           <div className="">
             <h1 className="text-6xl text-white font-bold ">
               Mealtime Made Easy
@@ -50,7 +50,7 @@ const Bannar = () => {
       </div>
       <div id="slide3" className="carousel-item relative w-full">
         <img src={banar3} className="w-full" />
-        <div className="absolute flex custom-text justify-between  ">
+        <div className="absolute hidden md:flex custom-text justify-between  ">
           <div className="">
             <h1 className="text-6xl text-white font-bold ">Favrite Item</h1>
             <p className="text-4xl text-white">
@@ -69,7 +69,7 @@ const Bannar = () => {
       </div>
       <div id="slide4" className="carousel-item relative w-full">
         <img src={banar2} className="w-full" />
-        <div className="absolute flex custom-text justify-between  ">
+        <div className="absolute hidden md:flex custom-text justify-between  ">
           <div className="">
             <h1 className="text-6xl text-white font-bold ">Thanksgiving</h1>
             <p className="text-4xl text-white">

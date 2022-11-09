@@ -5,6 +5,7 @@ import Home from "./Components/Home/Home";
 import HomeServic from "./Components/HomeService/HomeServic";
 import Main from "./Components/Layout/Main";
 import Login from "./Components/Login/Login";
+import MyReview from "./Components/MyReview/MyReview";
 import Register from "./Components/Register/Register";
 import Servi from "./Components/Servi/Servi";
 import Services from "./Components/Services/Services";
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/myreview",
+        element: <MyReview></MyReview>,
       },
     ],
   },

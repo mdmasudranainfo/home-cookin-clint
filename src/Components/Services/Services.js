@@ -11,7 +11,7 @@ const Services = () => {
       .catch((err) => console.error(err));
   }, []);
   return (
-    <div className="grid grid-cols-3 gap-3">
+    <div className="grid lg:grid-cols-3 gird-cols-1 gap-3">
       {foods.map((food) => (
         <SingleService key={food._id} food={food}></SingleService>
       ))}

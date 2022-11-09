@@ -2,7 +2,7 @@ import React from "react";
 
 const HappyClint = () => {
   return (
-    <div className=" w-9/12 mx-auto grid grid-cols-3  bg-primary my-4 rounded-2xl p-5 ">
+    <div className=" w-9/12 mx-auto grid lg:grid-cols-3 grid-cols-1  bg-primary my-4 rounded-2xl p-5 ">
       <div className="">
         <div className="text-3xl font-semibold text-center ">Total Clint</div>
         <div className="logo flex justify-center">

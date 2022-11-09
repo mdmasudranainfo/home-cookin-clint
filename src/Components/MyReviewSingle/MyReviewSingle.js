@@ -1,6 +1,6 @@
 import React from "react";
 
-const SingleReview = ({ rv }) => {
+const MyReviewSingle = ({ rv }) => {
   return (
     <div className="card w-full bg-white text-black shadow-xl my-4">
       <div className="card-body ">
@@ -14,4 +14,4 @@ const SingleReview = ({ rv }) => {
   );
 };
 
-export default SingleReview;
+export default MyReviewSingle;

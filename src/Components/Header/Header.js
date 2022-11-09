@@ -62,9 +62,9 @@ const Header = () => {
             <Link to="/">Home</Link>
           </li>
 
-          {/* <li>
-            <Link >Log Out</Link>
-          </li> */}
+          <li>
+            <Link to="/myreview">My Review</Link>
+          </li>
         </ul>
       </div>
       <div className="navbar-end">
@@ -75,7 +75,7 @@ const Header = () => {
                 tabIndex={0}
                 className="cursor-pointer w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2"
               >
-                <img alt="" src={user?.photoURL} />
+                <img alt="" src={user.photoURL} />
               </div>
               <ul
                 tabIndex={0}
