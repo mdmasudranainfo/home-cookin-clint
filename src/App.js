@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
+import AddProduct from "./Components/AddProduct/AddProduct";
 // import Bannar from "./Components/Bannar/Bannar";
 import Home from "./Components/Home/Home";
 // import HomeServic from "./Components/HomeService/HomeServic";
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
         element: <ReviewUpdate></ReviewUpdate>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/review/${params.id}`),
+      },
+      {
+        path: "/addService",
+        element: <AddProduct></AddProduct>,
       },
     ],
   },
