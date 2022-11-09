@@ -62,18 +62,32 @@ const Header = () => {
             <Link to="/">Home</Link>
           </li>
 
-          <li>
-            <Link onClick={logOut}>Log Out</Link>
-          </li>
+          {/* <li>
+            <Link >Log Out</Link>
+          </li> */}
         </ul>
       </div>
       <div className="navbar-end">
         {user ? (
           <>
-            <div className="avatar">
-              <div className="cursor-pointer w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+            <div className="avatar dropdown dropdown-end">
+              <div
+                tabIndex={0}
+                className="cursor-pointer w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2"
+              >
                 <img alt="" src={user.photoURL} />
               </div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <Link onClick={logOut}>LogOut</Link>
+                </li>
+                <li>
+                  <a>Item 2</a>
+                </li>
+              </ul>
             </div>
             {/*  */}
           </>

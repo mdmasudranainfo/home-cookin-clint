@@ -8,12 +8,14 @@ import {
   onAuthStateChanged,
   updateProfile,
   signOut,
+  GithubAuthProvider,
 } from "firebase/auth";
 import app from "../../Firebase/Firebase.config";
 
 export const authContext = createContext();
 const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
+const googleProvider = new GoogleAuthProvider();
+const gitProvider = new GithubAuthProvider();
 
 const UserContext = ({ children }) => {
   const [user, setUSer] = useState({});
@@ -46,7 +48,11 @@ const UserContext = ({ children }) => {
   };
   //   google SingIn
   const googleSing = () => {
-    return signInWithPopup(auth, provider);
+    return signInWithPopup(auth, googleProvider);
+  };
+  // github SingIn
+  const githubSing = () => {
+    return signInWithPopup(auth, gitProvider);
   };
 
   //
@@ -54,10 +60,18 @@ const UserContext = ({ children }) => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUSer(currentUser);
     });
-    return unSubscribe();
+    return () => unSubscribe();
   }, []);
   //
-  const userInfo = { Login, logOut, update, user, Register, googleSing };
+  const userInfo = {
+    Login,
+    githubSing,
+    logOut,
+    update,
+    user,
+    Register,
+    googleSing,
+  };
   return (
     <authContext.Provider value={userInfo}>
       {children}
