@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
-import Bannar from "./Components/Bannar/Bannar";
+// import Bannar from "./Components/Bannar/Bannar";
 import Home from "./Components/Home/Home";
-import HomeServic from "./Components/HomeService/HomeServic";
+// import HomeServic from "./Components/HomeService/HomeServic";
 import Main from "./Components/Layout/Main";
 import Login from "./Components/Login/Login";
 import MyReview from "./Components/MyReview/MyReview";

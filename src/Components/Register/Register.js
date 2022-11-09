@@ -26,7 +26,7 @@ const Register = () => {
   const googleHanler = () => {
     googleSing()
       .then((result) => {
-        const user = result.user;
+        // const user = result.user;
         toast.success("Successfully Register!");
       })
       .then((result) => {
@@ -45,7 +45,7 @@ const Register = () => {
     const password = form.password.value;
     Register(email, password)
       .then((result) => {
-        const user = result.user;
+        // const user = result.user;
         update(name, photoURL);
         toast.success("Successfully Register!");
         navigate("/");

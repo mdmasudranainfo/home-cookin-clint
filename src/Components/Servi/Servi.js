@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useLoaderData, useNavigate } from "react-router-dom";
-import { FaBeer, FaStar, FaStarHalfAlt } from "react-icons/fa";
+import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
+import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 import { authContext } from "../Context/UserContext";
@@ -8,7 +8,8 @@ import toast from "react-hot-toast";
 import SingleReview from "./SingleReview/SingleReview";
 
 const Servi = () => {
-  const navigate = useNavigate();
+  let location = useLocation();
+  const Navigate = useNavigate();
   const data = useLoaderData();
   // console.log(data);
   const { name: title, photo, description, price, rating, _id } = data;
@@ -18,7 +19,7 @@ const Servi = () => {
     event.preventDefault();
     if (!user) {
       toast.error("Plase Login");
-      navigate("/login");
+      <Navigate to="/login" state={{ from: location }} replace />;
       return;
     }
     const form = event.target;
@@ -61,7 +62,7 @@ const Servi = () => {
     fetch(`http://localhost:5000/review?serviceID=${_id}`)
       .then((res) => res.json())
       .then((data) => setReview(data));
-  }, []);
+  }, [_id]);
 
   //
 
