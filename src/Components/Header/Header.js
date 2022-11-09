@@ -75,7 +75,7 @@ const Header = () => {
                 tabIndex={0}
                 className="cursor-pointer w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2"
               >
-                <img alt="" src={user.photoURL} />
+                <img alt="" src={user?.photoURL} />
               </div>
               <ul
                 tabIndex={0}

@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import toast from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { authContext } from "../Context/UserContext";
 
 const Register = () => {
   const { Register, update, googleSing, githubSing } = useContext(authContext);
-
+  const navigate = useNavigate();
   // .................
 
   //
@@ -48,6 +48,7 @@ const Register = () => {
         const user = result.user;
         update(name, photoURL);
         toast.success("Successfully Register!");
+        navigate("/");
       })
       .catch((err) => {
         toast.error(err.message);

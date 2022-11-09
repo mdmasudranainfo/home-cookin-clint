@@ -11,9 +11,7 @@ const SingleService = ({ food }) => {
           <img src={photo} alt="" className="h-4/6" />
         </PhotoView>
       </PhotoProvider>
-      {/* <figure className="serviceImg">
-        <img alt="" className="" src={photo} />
-      </figure> */}
+
       <div className="card-body">
         <h2 className="card-title">{title}</h2>
         <p>
