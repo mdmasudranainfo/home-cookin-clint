@@ -72,6 +72,7 @@ const UserContext = ({ children }) => {
     user,
     Register,
     googleSing,
+    loader,
   };
   return (
     <authContext.Provider value={userInfo}>

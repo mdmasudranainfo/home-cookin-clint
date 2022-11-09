@@ -32,6 +32,9 @@ const MyReview = () => {
   };
   return (
     <div>
+      {review.length === 0 && (
+        <p className="text-center text-3xl my-52">No Reviews</p>
+      )}
       {review.map((rv) => (
         <MyReviewSingle
           rv={rv}
