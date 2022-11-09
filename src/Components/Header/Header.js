@@ -33,11 +33,9 @@ const Header = () => {
               <Link to="/">Home</Link>
             </li>
 
-            {user && (
-              <li>
-                <Link to="/myreview">My Review</Link>
-              </li>
-            )}
+            <li>
+              <Link to="/myreview">My Review</Link>
+            </li>
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost normal-case text-xl">
@@ -63,10 +61,22 @@ const Header = () => {
           <li>
             <Link to="/">Home</Link>
           </li>
-
           <li>
-            <Link to="/myreview">My Review</Link>
+            <Link to="/blog">Blog</Link>
           </li>
+
+          {user ? (
+            <>
+              <li>
+                <Link to="/myreview">My Review</Link>
+              </li>
+              <li>
+                <Link to="/addService">Add Product</Link>
+              </li>
+            </>
+          ) : (
+            <></>
+          )}
         </ul>
       </div>
       <div className="navbar-end">
@@ -85,9 +95,6 @@ const Header = () => {
               >
                 <li>
                   <Link onClick={logOut}>LogOut</Link>
-                </li>
-                <li>
-                  <a>Item 2</a>
                 </li>
               </ul>
             </div>

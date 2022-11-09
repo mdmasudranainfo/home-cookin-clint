@@ -1,12 +1,14 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import AddProduct from "./Components/AddProduct/AddProduct";
+import Blog from "./Components/Blog/Blog";
 // import Bannar from "./Components/Bannar/Bannar";
 import Home from "./Components/Home/Home";
 // import HomeServic from "./Components/HomeService/HomeServic";
 import Main from "./Components/Layout/Main";
 import Login from "./Components/Login/Login";
 import MyReview from "./Components/MyReview/MyReview";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import Register from "./Components/Register/Register";
 import ReviewUpdate from "./Components/ReviewUpdate/ReviewUpdate";
 import Servi from "./Components/Servi/Servi";
@@ -46,13 +48,25 @@ const router = createBrowserRouter([
       },
       {
         path: "/myreview/:id",
-        element: <ReviewUpdate></ReviewUpdate>,
+        element: (
+          <PrivateRoute>
+            <ReviewUpdate></ReviewUpdate>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/review/${params.id}`),
       },
       {
         path: "/addService",
-        element: <AddProduct></AddProduct>,
+        element: (
+          <PrivateRoute>
+            <AddProduct></AddProduct>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>,
       },
     ],
   },

@@ -6,6 +6,8 @@ import { authContext } from "../Context/UserContext";
 const Login = () => {
   let navigate = useNavigate();
   let location = useLocation();
+  // let auth = useAuth();
+
   let from = location.state?.from?.pathname || "/";
   const { Login, googleSing, githubSing } = useContext(authContext);
   const google = () => {
