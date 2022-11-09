@@ -7,6 +7,7 @@ import Main from "./Components/Layout/Main";
 import Login from "./Components/Login/Login";
 import MyReview from "./Components/MyReview/MyReview";
 import Register from "./Components/Register/Register";
+import ReviewUpdate from "./Components/ReviewUpdate/ReviewUpdate";
 import Servi from "./Components/Servi/Servi";
 import Services from "./Components/Services/Services";
 // import SingleService from "./Components/SingleService/SingleService";
@@ -41,6 +42,12 @@ const router = createBrowserRouter([
       {
         path: "/myreview",
         element: <MyReview></MyReview>,
+      },
+      {
+        path: "/myreview/:id",
+        element: <ReviewUpdate></ReviewUpdate>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/review/${params.id}`),
       },
     ],
   },

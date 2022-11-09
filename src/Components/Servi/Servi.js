@@ -12,7 +12,7 @@ const Servi = () => {
   const Navigate = useNavigate();
   const data = useLoaderData();
   // console.log(data);
-  const { name: title, photo, description, price, rating, _id } = data;
+  const { title, photo, description, price, rating, _id } = data;
   const { user } = useContext(authContext);
   // Riviews.........send post
   function ReviewHanlar(event) {
@@ -32,6 +32,8 @@ const Servi = () => {
       name,
       email,
       massege,
+      title,
+      image: photo,
     };
     //  post data
     fetch("http://localhost:5000/review", {
@@ -76,7 +78,7 @@ const Servi = () => {
         </PhotoProvider>
 
         <div className="card-body">
-          <h2 className="card-title text-green-700 font-semibold">{title}</h2>
+          <h2 className="card-title font-semibold">{title}</h2>
 
           <div className="flex justify-between">
             <p className="text-xl font-semibold ">Price: ${price}</p>

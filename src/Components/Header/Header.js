@@ -33,9 +33,11 @@ const Header = () => {
               <Link to="/">Home</Link>
             </li>
 
-            <li>
-              <Link to="/myreview">My Review</Link>
-            </li>
+            {user && (
+              <li>
+                <Link to="/myreview">My Review</Link>
+              </li>
+            )}
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost normal-case text-xl">
