@@ -5,6 +5,7 @@ import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 import { authContext } from "../Context/UserContext";
 import toast from "react-hot-toast";
+import SingleReview from "./SingleReview/SingleReview";
 
 const Servi = () => {
   const navigate = useNavigate();
@@ -128,9 +129,7 @@ const Servi = () => {
         <div className="view">
           <div className="">
             {review?.map((rv) => (
-              <div key={rv?._id}>
-                <h1>{rv?.name}</h1>
-              </div>
+              <SingleReview rv={rv} key={rv?._id}></SingleReview>
             ))}
           </div>
         </div>
