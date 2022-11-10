@@ -4,13 +4,14 @@ import { useLoaderData } from "react-router-dom";
 
 const ReviewUpdate = () => {
   const review = useLoaderData();
+  // review.sort({timeDate-1});
   console.log(review);
   const submitHandle = (event) => {
     event.preventDefault();
     const form = event.target;
     const message = form.message.value;
     // console.log(message);
-    fetch(`http://localhost:5000/update/${review._id}`, {
+    fetch(`https://home-cookin-server.vercel.app/update/${review._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

@@ -34,7 +34,7 @@ const router = createBrowserRouter([
         path: "/service/:id",
         element: <Servi></Servi>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/service/${params.id}`),
+          fetch(`https://home-cookin-server.vercel.app/service/${params.id}`),
       },
       {
         path: "/login",
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/review/${params.id}`),
+          fetch(`https://home-cookin-server.vercel.app/review/${params.id}`),
       },
       {
         path: "/addService",

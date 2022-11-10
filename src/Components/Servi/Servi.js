@@ -8,15 +8,21 @@ import toast from "react-hot-toast";
 import SingleReview from "./SingleReview/SingleReview";
 import useTitle from "../Hooks/UseTitle";
 
-const time = new Date();
-console.log(time.toString());
+const time = new Date().toLocaleTimeString();
+const date = new Date().toDateString();
+const timeDate = `${time}-${date}`;
 
 const Servi = () => {
   useTitle("Service Details");
   // let location = useLocation();
   const navigate = useNavigate();
   const data = useLoaderData();
-  // console.log(data);
+  // sort
+  // data.sort((a, b) => {
+  //   return a.timeDate - b.timeDate;
+  // });
+
+  //
   const { title, photo, description, price, rating, _id } = data;
   const { user } = useContext(authContext);
   // Riviews.........send post
@@ -39,9 +45,10 @@ const Servi = () => {
       massege,
       title,
       image: photo,
+      timeDate,
     };
     //  post data
-    fetch("http://localhost:5000/review", {
+    fetch("https://home-cookin-server.vercel.app/review", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -66,7 +73,7 @@ const Servi = () => {
   const [review, setReview] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/review?serviceID=${_id}`)
+    fetch(`https://home-cookin-server.vercel.app/review?serviceID=${_id}`)
       .then((res) => res.json())
       .then((data) => setReview(data));
   }, [_id]);

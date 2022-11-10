@@ -6,7 +6,7 @@ import HomeServiceSingle from "../HomeServicesSingle/HomeServiceSingle";
 const HomeServic = () => {
   const [foods, setFoods] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/service3")
+    fetch("https://home-cookin-server.vercel.app/service3")
       .then((res) => res.json())
       .then((data) => setFoods(data))
       .catch((err) => console.error(err));

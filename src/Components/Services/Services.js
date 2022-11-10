@@ -7,7 +7,7 @@ const Services = () => {
   useTitle("Food");
   const [foods, setFoods] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/service")
+    fetch("https://home-cookin-server.vercel.app/service")
       .then((res) => res.json())
       .then((data) => setFoods(data))
       .catch((err) => console.error(err));
