@@ -10,7 +10,14 @@ const MyReview = () => {
   const { user } = useContext(authContext);
 
   useEffect(() => {
-    fetch(`https://home-cookin-server.vercel.app/reviews?email=${user?.email}`)
+    fetch(
+      `https://home-cookin-server.vercel.app/reviews?email=${user?.email}`,
+      {
+        headers: {
+          authorization: `Barer ${localStorage.getItem("token")}`,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => setReview(data));
   }, [user?.email]);

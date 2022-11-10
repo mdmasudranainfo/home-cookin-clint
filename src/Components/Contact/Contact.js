@@ -61,7 +61,9 @@ const Contact = () => {
               </button>
             </div>
           </div> */}
-          <button className="btn btn-primary">Send Message</button>
+          <div className="flex justify-center">
+            <button className="btn btn-primary">Send Message</button>
+          </div>
         </div>
       </fieldset>
     </div>
