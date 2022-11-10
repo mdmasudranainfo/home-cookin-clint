@@ -6,10 +6,12 @@ import "react-photo-view/dist/react-photo-view.css";
 import { authContext } from "../Context/UserContext";
 import toast from "react-hot-toast";
 import SingleReview from "./SingleReview/SingleReview";
+import useTitle from "../Hooks/UseTitle";
 
 const Servi = () => {
-  let location = useLocation();
-  const Navigate = useNavigate();
+  useTitle("Service Details");
+  // let location = useLocation();
+  const navigate = useNavigate();
   const data = useLoaderData();
   // console.log(data);
   const { title, photo, description, price, rating, _id } = data;
@@ -17,9 +19,9 @@ const Servi = () => {
   // Riviews.........send post
   function ReviewHanlar(event) {
     event.preventDefault();
-    if (!user) {
+    if (!user?.email) {
       toast.error("Plase Login");
-      <Navigate to="/login" state={{ from: location }} replace />;
+      navigate("/login");
       return;
     }
     const form = event.target;

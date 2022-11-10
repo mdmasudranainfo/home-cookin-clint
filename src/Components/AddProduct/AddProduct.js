@@ -1,7 +1,9 @@
 import React from "react";
 import toast from "react-hot-toast";
+import useTitle from "../Hooks/UseTitle";
 
 const AddProduct = () => {
+  useTitle("Add Product");
   const submitHandle = (event) => {
     event.preventDefault();
     const form = event.target;

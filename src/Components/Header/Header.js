@@ -32,10 +32,22 @@ const Header = () => {
             <li>
               <Link to="/">Home</Link>
             </li>
-
             <li>
-              <Link to="/myreview">My Review</Link>
+              <Link to="/blog">Blog</Link>
             </li>
+
+            {user ? (
+              <>
+                <li>
+                  <Link to="/myreview">My Review</Link>
+                </li>
+                <li>
+                  <Link to="/addService">Add Product</Link>
+                </li>
+              </>
+            ) : (
+              <></>
+            )}
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost normal-case text-xl">

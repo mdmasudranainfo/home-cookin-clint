@@ -20,7 +20,7 @@ const SingleService = ({ food }) => {
 
         <div className="card-actions justify-between">
           <p className="text-2xl font-semibold">Price: {price}</p>
-          <Link to={`/singlService/${_id}`} className="btn btn-primary">
+          <Link to={`/service/${_id}`} className="btn btn-primary">
             Details
           </Link>
         </div>
