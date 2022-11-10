@@ -8,6 +8,9 @@ import toast from "react-hot-toast";
 import SingleReview from "./SingleReview/SingleReview";
 import useTitle from "../Hooks/UseTitle";
 
+const time = new Date();
+console.log(time.toString());
+
 const Servi = () => {
   useTitle("Service Details");
   // let location = useLocation();
