@@ -41,26 +41,26 @@ const AddProduct = () => {
           type="text"
           placeholder="Product title"
           name="title"
-          className="input input-bordered input-md w-6/12"
+          className="input input-bordered input-md lg:w-6/12 w-full"
         />
 
         <input
           type="text"
           placeholder="Price"
           name="price"
-          className="input input-bordered block mt-2 input-md w-6/12"
+          className="input input-bordered block mt-2 input-md lg:w-6/12 w-full"
         />
         <input
           type="text"
           placeholder="Rating"
           name="rating"
-          className="input input-bordered block mt-2 input-md w-6/12"
+          className="input input-bordered block mt-2 input-md lg:w-6/12 w-full"
         />
         <input
           type="text"
           placeholder="Photo URL"
           name="photo"
-          className="input input-bordered block mt-2 input-md w-6/12"
+          className="input input-bordered block mt-2 input-md lg:w-6/12 w-full"
         />
         <textarea
           placeholder="Description"

@@ -16,7 +16,7 @@ const HomeServic = () => {
       <h1 className="text-center font-bold text-5xl my-20">
         Choce Your Favrite Foods
       </h1>
-      <div className="grid lg:grid-cols-3 grid-cols-1 gap-4">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
         {foods.map((food) => (
           <HomeServiceSingle key={food._id} food={food}></HomeServiceSingle>
         ))}

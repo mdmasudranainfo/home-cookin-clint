@@ -1,8 +1,10 @@
 import React from "react";
 import toast from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
+import useTitle from "../Hooks/UseTitle";
 
 const ReviewUpdate = () => {
+  useTitle("Update");
   const review = useLoaderData();
   // review.sort({timeDate-1});
   console.log(review);

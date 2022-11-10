@@ -18,7 +18,7 @@ const MyReviewSingle = ({ rv, deleteHandle }) => {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-8 h-8"
+            className="w-8 h-8 text-red-700"
           >
             <path
               strokeLinecap="round"
@@ -33,7 +33,7 @@ const MyReviewSingle = ({ rv, deleteHandle }) => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-8 h-8"
+              className="w-8 h-8 text-primary"
             >
               <path
                 strokeLinecap="round"
