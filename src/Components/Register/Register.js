@@ -116,7 +116,7 @@ const Register = () => {
             </div>
           </div>
           <button className="block w-full p-3 text-center rounded-sm dark:text-gray-900 dark:bg-violet-400">
-            Login
+            Register
           </button>
         </form>
         <div className="flex items-center pt-4 space-x-1">

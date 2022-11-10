@@ -25,6 +25,7 @@ const AddProduct = () => {
       .then((data) => {
         if (data.acknowledged) {
           toast.success("Add success");
+          form.reset();
         }
         // console.log(data);
       })

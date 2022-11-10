@@ -43,11 +43,11 @@ const Contact = () => {
               className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900"
             ></textarea>
           </div>
-          {/* <div className="col-span-full">
-            <label for="bio" className="text-sm">
+          <div className="col-span-full">
+            {/* <label for="bio" className="text-sm">
               Photo
-            </label>
-            <div className="flex items-center space-x-2">
+            </label> */}
+            {/* <div className="flex items-center space-x-2">
               <img
                 src="https://source.unsplash.com/30x30/?random"
                 alt=""
@@ -59,10 +59,8 @@ const Contact = () => {
               >
                 Change
               </button>
-            </div>
-          </div> */}
-          <div className="flex justify-center">
-            <button className="btn btn-primary">Send Message</button>
+            </div> */}
+            <button className="btn btn-primary">Message</button>
           </div>
         </div>
       </fieldset>

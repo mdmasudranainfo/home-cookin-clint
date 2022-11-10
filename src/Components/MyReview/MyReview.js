@@ -19,7 +19,10 @@ const MyReview = () => {
       }
     )
       .then((res) => res.json())
-      .then((data) => setReview(data));
+      .then((data) => {
+        const riminig = [...data].reverse();
+        setReview(riminig);
+      });
   }, [user?.email]);
 
   //

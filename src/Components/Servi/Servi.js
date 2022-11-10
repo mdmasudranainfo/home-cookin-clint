@@ -75,11 +75,15 @@ const Servi = () => {
   useEffect(() => {
     fetch(`https://home-cookin-server.vercel.app/review?serviceID=${_id}`)
       .then((res) => res.json())
-      .then((data) => setReview(data));
+      .then((data) => {
+        const riminig = [...data].reverse();
+        setReview(riminig);
+      });
   }, [_id]);
 
   //
-
+  // const riminig = [...review].reverse();
+  // setReview(riminig);
   return (
     <div className="grid lg:grid-cols-2 grid-cols-1 gap-2">
       <div className="card bg-base-100 shadow-xl">
